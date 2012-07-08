@@ -47,7 +47,7 @@ function init_handebar_options() {
  */
 function handlebar_options(list, sel_value, value_field, label_field, sort_by) {
 
-    if (arguments.length == 1) {
+    if (arguments.length == 1 && _.isObject(list)) {
         _.each('sel_value,value_field,label_field,sort_by,list'.split(','), function (f) {
             if (list.hasOwnProperty(f)) {
                 eval(f + ' = list[f]');
