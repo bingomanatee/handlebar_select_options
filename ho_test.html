@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Nuby Express Administration</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width">
+    <link href="twitter-bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Scripts -->
+
+    <script type="text/javascript" src="libs/jq/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="libs/jq/jquery-ui-1.8.21.custom.min.js"></script>
+<style>
+    div.span4 .inner {
+        padding: 0.5em;
+    }
+    div.span4 h2 {
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid rgb(200,200,200);
+        text-align: center
+    }
+    .inner pre {
+        font-size: 85%; font-weight: bold;
+        line-height: 110%;
+    }
+</style>
+</head>
+
+<head>
+    <title></title>
+</head>
+<body style="padding: 2em">
+<section class="page-header">
+    <h1>The Handlebar Options test suite</h1>
+
+    <p>This page is a dynamic validation of the Handlebar Options test suite. </p>
+</section>
+
+<div class="row">
+    <div class="span4">
+
+        <div class="inner">
+            <h2>Minimal (default) call</h2>
+
+            <p>This test validates the minimal call of handlebar_options: values passed in as value/label combo form, no
+                default
+                value.</p>
+
+            <h3>Input: </h3>
+            <pre id="m1in"></pre>
+
+            <h3>Expected options</h3>
+
+            <ul>
+                <li>Oregon</li>
+                <li>California</li>
+                <li>New York City</li>
+            </ul>
+            <span id="m1"></span>
+
+            </span>
+            <h3>Source:</h3>
+        <pre id="m1pre"></span>
+
+        </pre>
+        </div>
+        <p><b>Result: </b><span id="m1result"></span></p>
+    </div>
+    <div class="span4">
+
+        <div class="inner">
+        <h2>Sort by Label</h2>
+
+        <p>Validating sort by label.
+            Also tests the ability to parse param-style use of <tt>handlebar_options</tt>.</p>
+
+
+            <h3>Input: </h3>
+            <pre id="m2in"></pre>
+        <h3>Expected options</h3>
+
+        <ul>
+            <li>California</li>
+            <li>New York City</li>
+            <li>Oregon</li>
+        </ul>
+        <span id="m2"></span>
+
+        <h3>Source:</h3>
+        <pre id="m2pre"></span>
+
+        </pre>
+            </div>
+        <p><b>Result: </b><span id="m2result"></span></p>
+    </div>
+
+    <div class="span4">
+        <div class="inner">
+
+            <h2>NY as a value </h2>
+
+            <p>Validating that the sel_value changes the selected value of a list</p>
+
+
+            <h3>Input: </h3>
+            <pre id="m3in"></pre>
+            <h3>Expected options</h3>
+
+            <ul>
+                <li>California</li>
+                <li>New York City <b>Selected</b></li>
+                <li>Oregon</li>
+            </ul>
+            <span id="m3"></span>
+
+            <h3>Source:</h3>
+        <pre id="m3pre"></span>
+
+        </pre>
+        </div>
+        <p><b>Result: </b><span id="m3result"></span></p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="span4">
+        <div class="inner">
+
+            <h2>Custom fields</h2>
+
+            <p>Tests conversion of key and value fields.</p>
+
+
+            <h3>Input: </h3>
+            <pre id="m4in"></pre>
+            <h3>Expected options</h3>
+
+            <p>No selected value - the first item should be selected by default.</p>
+            <ul>
+                <li>Oregon</li>
+                <li>California</li>
+                <li>New York City</li>
+            </ul>
+            <span id="m4"></span>
+
+            </span>
+            <h3>Source:</h3>
+        <pre id="m4pre"></span>
+
+        </pre>
+        </div>
+        <p><b>Result: </b><span id="m4result"></span></p>
+    </div>
+    <div class="span4">
+        <div class="inner">
+
+            <h2>Bad data</h2>
+
+            <p>The id field has been set to "bad_field", that should break the system.</p>
+
+
+            <h3>Input: </h3>
+            <pre id="m5in"></pre>
+            <h3>Expected options</h3>
+
+            <p>Thrown error: "list item does not have value field bad_field".</p>
+            <span id="m5"></span>
+
+            <h3>Source:</h3>
+        <pre id="m5pre"></span>
+
+        </pre>
+        </div>
+        <p><b>Result: </b><span id="m5result"></span></p>
+    </div>
+</div>
+
+<h1>Advanced Data Processing</h1>
+<p>These examples show how data accessor methods can be applied to complex objects (I.e., Backbone/Ember/etc. collections) to allow you to use collections
+easily without having to create tossaway models. </p>
+<div class="row">
+    <div class="span4">
+        <div class="inner">
+
+            <h2>Functional values</h2>
+
+            <p>Using accessor functions to extract data from a more complex source. this is useful if you want to process a Backbone collection</p>
+
+            <h3>Input: </h3>
+            <pre id="m6in"></pre>
+            <h3>Expected options</h3>
+
+            <p></p>
+            <span id="m6"></span>
+
+            <h3>Source:</h3>
+        <pre id="m6pre"></span>
+
+        </pre>
+        </div>
+        <p><b>Result: </b><span id="m6result"></span></p>
+    </div>
+<div class="span4">
+    <div class="inner">
+
+        <h2>Value test function</h2>
+
+        <p>The above test with a new wrinkle: the sel_value pproperty of the input is now a function  as well.</p>
+
+        <h3>Input: </h3>
+        <pre id="m7in"></pre>
+        <h3>Expected options</h3>
+
+        <p></p>
+        <span id="m7"></span>
+
+        <h3>Source:</h3>
+        <pre id="m7pre"></span>
+
+        </pre>
+    </div>
+    <p><b>Result: </b><span id="m7result"></span></p>
+</div>
+</div>
+
+<script type="text/javascript" src="libs/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="libs/handlebars/handlebars-1.0.0.beta.6.js"></script>
+<script type="text/javascript" src="handlebar_options.js"></script>
+<script type="text/javascript" src="ho_test.js"></script>
+<script language="javascript">
+    $(ho_test)
+
+</script>
+</body>
+</html>
